@@ -1,0 +1,10 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebServerAndClient",
+    "\\WebServerAndClient\\Controllers",
+    "\\WebServerAndClient\\Models"
+  ],
+  "SelectedNode": "\\WebServerAndClient\\Models\\WebServerAndClientContext.cs",
+  "PreviewInSolutionExplorer": false
+}

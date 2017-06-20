@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Register</title>
+
+    <link href="Styles/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-3.2.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+    <script src="Scripts/navbar.js"></script>
+</head>
+<body>
+    <p><div id="navBar"></div></p>
+    <div>
+        <h2>Register</h2>
+        <table>
+            <tr>
+                <td>Username: </td>
+                <td><input type="text" id="usrName"/></td>
+            </tr>
+            <tr>
+                <td>Password: </td>
+                <td><input type="text" id="password" /></td>
+            </tr>
+            <tr>
+                <td>Enter your password again: </td>
+                <td><input type="text" id="passwordValidation" /></td>
+            </tr>
+            <tr>
+                <td>Email: </td>
+                <td><input type="text" id="email" /></td>
+            </tr>
+        </table>
+        <input type="button" id="btnRegister" value="Register" />
+    </div>
+    <div>
+        <p id="example"></p>
+    </div>
+    <script>
+        var messagesHub = $.connection.messagesHub;
+
+        messagesHub.client.gotMessage = function (name) {
+            $("#example").append("<li><strong>" + name + "</strong>");
+        };
+
+        $.connection.hub.start().done(function () {
+            $("#btnRegister").click(function () {
+                var userName = $("#usrName").val();
+                messagesHub.server.connect(userName);
+            });
+
+            $("#btnSendMessage").click(function () {
+                var userPhoneNum = $("#userPhoneNum").val();
+                var senderPhoneNum = $("#targetPhoneNum").val();
+                var text = $("#msgText").val();
+                messagesHub.server.sendMessage(userPhoneNum, senderPhoneNum, text);
+            });
+        });
+    </script>
+</body>
+</html>
