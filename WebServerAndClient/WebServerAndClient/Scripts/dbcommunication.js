@@ -14,7 +14,9 @@ $("#btnRegister").click(function () {
         ID: 1,
         UserName: $("#usrName").val(),
         Password: $("#password").val(),
-        EMail: $("#email").val()
+        EMail: $("#email").val(),
+        Wins: 0,
+        Loses: 0
     };
     //$.ajax({
     //    method: "POST",
@@ -23,5 +25,5 @@ $("#btnRegister").click(function () {
     //}).done(function () {
     //        alert("ghgjhgjh");
     //    });
-    $.post("../api/Client", dataa, function () { alert("hola baby"); });
+    $.post("../api/Client", dataa);
 });

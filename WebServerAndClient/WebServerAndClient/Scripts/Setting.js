@@ -4,7 +4,6 @@ algoMap[0] = "BFS";
 algoMap[1] = "DFS";
 $(document).ready(function () {
     // if its first time to define settings.
-    localStorage.clear();
     if (localStorage.getItem("mazeParameters") === null) {
         defualtSettings = {
             firstAlgo: 0,
@@ -35,7 +34,7 @@ $(document).ready(function () {
             rows: $("#rowsId").val(),
             cols: $("#colsId").val()
         };
-        defualtSettings.secondAlgo = 2 - defualtSettings.firstAlgo;
+        defualtSettings.secondAlgo = 1 - defualtSettings.firstAlgo;
         localStorage.setItem("mazeParameters", JSON.stringify(defualtSettings));
     });
 });
