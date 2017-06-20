@@ -19,6 +19,6 @@ namespace WebServerAndClient.Models
         {
         }
 
-        public DbSet<ClientModel> ClientModels { get; set; }
+        public DbSet<ClientModel> Clients { get; set; }
     }
 }

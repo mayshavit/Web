@@ -27,8 +27,8 @@ namespace WebServerAndClient.Migrations
             //    );
             //
 
-            context.ClientModels.AddOrUpdate(x => x.ID,
-                new ClientModel() { ID = 1, UserName = "bh", Password = "12345", EMail = "d@j.cm" });
+            /*context.Clients.AddOrUpdate(x => x.ID,
+                new ClientModel() { ID = 2, UserName = "bh", Password = "12345", EMail = "d@j.cm" });*/
         }
     }
 }

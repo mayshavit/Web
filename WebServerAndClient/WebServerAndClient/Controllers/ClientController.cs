@@ -13,21 +13,24 @@ using WebServerAndClient.Models;
 
 namespace WebServerAndClient.Controllers
 {
+    [Route("api/Client")]
     public class ClientController : ApiController
     {
         private WebServerAndClientContext db = new WebServerAndClientContext();
 
         // GET: api/Client
-        public IQueryable<ClientModel> GetClientModels()
+        [HttpGet]
+        public string /*IQueryable<ClientModel>*/ GetClientModels()
         {
-            return db.ClientModels;
+            return "yossi is efes";
+            //return db.Clients;
         }
 
         // GET: api/Client/5
         [ResponseType(typeof(ClientModel))]
         public IHttpActionResult GetClientModel(int id)
         {
-            ClientModel clientModel = db.ClientModels.Find(id);
+            ClientModel clientModel = db.Clients.Find(id);
             if (clientModel == null)
             {
                 return NotFound();
@@ -75,12 +78,13 @@ namespace WebServerAndClient.Controllers
         [ResponseType(typeof(ClientModel))]
         public IHttpActionResult PostClientModel(ClientModel clientModel)
         {
+            //return Ok("bla");
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            db.ClientModels.Add(clientModel);
+            db.Clients.Add(clientModel);
             db.SaveChanges();
 
             return CreatedAtRoute("DefaultApi", new { id = clientModel.ID }, clientModel);
@@ -90,13 +94,13 @@ namespace WebServerAndClient.Controllers
         [ResponseType(typeof(ClientModel))]
         public IHttpActionResult DeleteClientModel(int id)
         {
-            ClientModel clientModel = db.ClientModels.Find(id);
+            ClientModel clientModel = db.Clients.Find(id);
             if (clientModel == null)
             {
                 return NotFound();
             }
 
-            db.ClientModels.Remove(clientModel);
+            db.Clients.Remove(clientModel);
             db.SaveChanges();
 
             return Ok(clientModel);
@@ -113,7 +117,7 @@ namespace WebServerAndClient.Controllers
 
         private bool ClientModelExists(int id)
         {
-            return db.ClientModels.Count(e => e.ID == id) > 0;
+            return db.Clients.Count(e => e.ID == id) > 0;
         }
     }
 }

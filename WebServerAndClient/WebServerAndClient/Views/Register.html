@@ -5,9 +5,10 @@
     <title>Register</title>
 
     <link href="Styles/bootstrap.css" rel="stylesheet" />
-    <script src="Scripts/jquery-3.2.1.js"></script>
-    <script src="Scripts/bootstrap.js"></script>
-    <script src="Scripts/navbar.js"></script>
+    <script src="../Scripts/jquery-3.2.1.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+    <script src="../Scripts/navbar.js"></script>
+
 </head>
 <body>
     <p><div id="navBar"></div></p>
@@ -36,7 +37,8 @@
     <div>
         <p id="example"></p>
     </div>
-    <script>
+    <script src="../Scripts/dbcommunication.js"></script>
+    <!--<script>
         var messagesHub = $.connection.messagesHub;
 
         messagesHub.client.gotMessage = function (name) {
@@ -56,6 +58,6 @@
                 messagesHub.server.sendMessage(userPhoneNum, senderPhoneNum, text);
             });
         });
-    </script>
+    </script>-->
 </body>
 </html>
