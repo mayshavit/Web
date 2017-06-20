@@ -114,6 +114,7 @@
     <Content Include="Scripts\knockout-3.4.2.debug.js" />
     <Content Include="Scripts\knockout-3.4.2.js" />
     <Content Include="Scripts\dbcommunication.js" />
+    <Content Include="Scripts\Setting.js" />
     <Content Include="Views\NavBar.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />

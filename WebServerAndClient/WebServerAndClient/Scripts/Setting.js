@@ -4,6 +4,7 @@ algoMap[0] = "BFS";
 algoMap[1] = "DFS";
 $(document).ready(function () {
     // if its first time to define settings.
+    localStorage.clear();
     if (localStorage.getItem("mazeParameters") === null) {
         defualtSettings = {
             firstAlgo: 0,
@@ -21,12 +22,10 @@ $(document).ready(function () {
     $('#algoSelection').append($('<option>', {
         value: defualtSettings.firstAlgo,
         text: algoMap[defualtSettings.firstAlgo],
-        class: optionClass
     }));
     $('#algoSelection').append($('<option>', {
         value: defualtSettings.secondAlgo,
         text: algoMap[defualtSettings.secondAlgo],
-        class: optionClass
     }));
 
     // after hitting submit.
