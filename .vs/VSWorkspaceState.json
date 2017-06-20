@@ -3,8 +3,9 @@
     "",
     "\\WebServerAndClient",
     "\\WebServerAndClient\\WebServerAndClient",
+    "\\WebServerAndClient\\WebServerAndClient\\App_Start",
     "\\WebServerAndClient\\WebServerAndClient\\Views"
   ],
-  "SelectedNode": "\\WebServerAndClient\\WebServerAndClient\\Views\\Register.html",
+  "SelectedNode": "\\WebServerAndClient\\WebServerAndClient\\App_Start\\WebApiConfig.cs",
   "PreviewInSolutionExplorer": false
 }
