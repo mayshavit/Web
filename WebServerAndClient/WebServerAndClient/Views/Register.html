@@ -44,26 +44,5 @@
         <p id="example"></p>
     </div>
     <script src="../Scripts/dbcommunication.js"></script>
-    <!--<script>
-        var messagesHub = $.connection.messagesHub;
-
-        messagesHub.client.gotMessage = function (name) {
-            $("#example").append("<li><strong>" + name + "</strong>");
-        };
-
-        $.connection.hub.start().done(function () {
-            $("#btnRegister").click(function () {
-                var userName = $("#usrName").val();
-                messagesHub.server.connect(userName);
-            });
-
-            $("#btnSendMessage").click(function () {
-                var userPhoneNum = $("#userPhoneNum").val();
-                var senderPhoneNum = $("#targetPhoneNum").val();
-                var text = $("#msgText").val();
-                messagesHub.server.sendMessage(userPhoneNum, senderPhoneNum, text);
-            });
-        });
-    </script>-->
 </body>
 </html>
