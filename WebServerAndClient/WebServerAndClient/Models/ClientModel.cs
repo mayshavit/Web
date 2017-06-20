@@ -8,7 +8,7 @@ namespace WebServerAndClient
 {
     public class ClientModel
     {/// <summary>
-    /// ///////////////////////////////////////////////
+    /// /////////////////////////////////////////////////
     /// </summary>
         [Key]
         public int ID { get; set; }
