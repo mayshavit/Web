@@ -9,7 +9,48 @@
     <script src="../Scripts/bootstrap.js"></script>
 </head>
 <body>
+
     <script src="../Scripts/navbar.js"></script>
-    <div id="navBar" />
+    <p><div id="navBar"></div></p>
+    <div align="center"><h1>settings</h1></div>
+    <div align="center">
+        <form id="mazeForm">
+            <label>rows</label>
+            <input id="rowsId" type="number" min="2" max="100" class="numbers" /><br /><br />
+            <label>cols</label>
+            <input id="colsId" type="number" min="2" max="100" class="numbers" /><br /><br />
+            <label>search algo</label><br />
+            <select id="algoSelection"></select><br /><br />
+            <input id="submitBtn" type="submit" value="save changes!" /><br />
+        </form>
+    </div> 
+    <br />
+    <br />
+    <script src="Scripts/Setting.js"></script>
+    <style>
+        h1{
+            font-size: 100px;
+        }
+        #algoSelection{
+            height: 50px;
+            width: 100px;
+        }
+        .numbers{
+            width: 150px;
+            position: relative;
+            left: 20px;
+        }
+        #colsId{
+            position: relative;
+            left: 28px;
+        }
+        label{
+            font-size: 50px;
+        }
+        input{
+            font-size: 30px;
+        }
+    </style>
+
 </body>
 </html>
