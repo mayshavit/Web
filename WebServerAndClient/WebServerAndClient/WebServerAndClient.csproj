@@ -114,6 +114,8 @@
     <Content Include="Scripts\knockout-3.4.2.debug.js" />
     <Content Include="Scripts\knockout-3.4.2.js" />
     <Content Include="Scripts\dbcommunication.js" />
+    <Content Include="Scripts\Login.js" />
+    <Content Include="Scripts\Setting.js" />
     <Content Include="Views\NavBar.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\jquery-3.2.1.js" />
@@ -147,6 +149,10 @@
     <Compile Include="Migrations\201706191725195_InitialDb2.Designer.cs">
       <DependentUpon>201706191725195_InitialDb2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706201913036_Initial.cs" />
+    <Compile Include="Migrations\201706201913036_Initial.Designer.cs">
+      <DependentUpon>201706201913036_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\ClientModel.cs" />
@@ -174,6 +180,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706191725195_InitialDb2.resx">
       <DependentUpon>201706191725195_InitialDb2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706201913036_Initial.resx">
+      <DependentUpon>201706201913036_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -78,7 +78,6 @@ namespace WebServerAndClient.Controllers
         [ResponseType(typeof(ClientModel))]
         public IHttpActionResult PostClientModel(ClientModel clientModel)
         {
-            //return Ok("bla");
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);

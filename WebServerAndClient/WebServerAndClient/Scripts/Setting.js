@@ -21,12 +21,10 @@ $(document).ready(function () {
     $('#algoSelection').append($('<option>', {
         value: defualtSettings.firstAlgo,
         text: algoMap[defualtSettings.firstAlgo],
-        class: optionClass
     }));
     $('#algoSelection').append($('<option>', {
         value: defualtSettings.secondAlgo,
         text: algoMap[defualtSettings.secondAlgo],
-        class: optionClass
     }));
 
     // after hitting submit.
@@ -36,7 +34,7 @@ $(document).ready(function () {
             rows: $("#rowsId").val(),
             cols: $("#colsId").val()
         };
-        defualtSettings.secondAlgo = 2 - defualtSettings.firstAlgo;
+        defualtSettings.secondAlgo = 1 - defualtSettings.firstAlgo;
         localStorage.setItem("mazeParameters", JSON.stringify(defualtSettings));
     });
 });
