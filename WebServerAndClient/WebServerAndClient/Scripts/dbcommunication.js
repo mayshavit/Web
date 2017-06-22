@@ -1,15 +1,4 @@
-﻿//var clientsUri = "api/Client"
-
-/*var btn = document.getElementById("btnRegister");
-btn.onclick = function () {
-    $.ajax({
-        method: "POST",
-        url: "api/Client",
-        data: 
-    })
-}*/
-
-$("#btnRegister").click(function () {
+﻿$("#btnRegister").click(function () {
     var dataa = {
         ID: 1,
         UserName: $("#usrName").val(),
@@ -26,4 +15,7 @@ $("#btnRegister").click(function () {
     //        alert("ghgjhgjh");
     //    });
     $.post("../api/Client", dataa);
+    sessionStorage.setItem("playerName", $("#usrName").val());
+    //$("registerForm").load("../Views/HomePage.html");
+    window.location.href = "../Views/HomePage.html";
 });

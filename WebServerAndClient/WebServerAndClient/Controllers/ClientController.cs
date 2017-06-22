@@ -83,9 +83,13 @@ namespace WebServerAndClient.Controllers
                 return BadRequest(ModelState);
             }
 
+
             db.Clients.Add(clientModel);
             db.SaveChanges();
-
+            /*if (db.Clients.Count() == 1)
+            {
+                clientModel.ID = 0;
+            }*/
             return CreatedAtRoute("DefaultApi", new { id = clientModel.ID }, clientModel);
         }
 
