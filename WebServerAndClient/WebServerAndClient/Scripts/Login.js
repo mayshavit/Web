@@ -7,7 +7,7 @@
         }
         else {
             sessionStorage.setItem("playerName", username);
-            window.location.href = "HomePage.html";
+            window.location.href = "../Views/HomePage.html";
         }
     });
 });
