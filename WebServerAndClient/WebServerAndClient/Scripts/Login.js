@@ -6,7 +6,8 @@
             alert("you have to fill username and password");
         }
         else {
-
+            sessionStorage.setItem("playerName", username);
+            window.location.href = "HomePage.html";
         }
     });
 });

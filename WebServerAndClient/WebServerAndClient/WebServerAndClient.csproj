@@ -115,6 +115,7 @@
     <Content Include="Scripts\knockout-3.4.2.js" />
     <Content Include="Scripts\dbcommunication.js" />
     <Content Include="Scripts\Login.js" />
+    <Content Include="Scripts\sessionNavbar.js" />
     <Content Include="Scripts\Setting.js" />
     <Content Include="Views\NavBar.html" />
     <Content Include="Scripts\bootstrap.js" />
