@@ -7,7 +7,9 @@
         }
         else {
             sessionStorage.setItem("playerName", username);
+            alert("before");
             window.location.href = "HomePage.html";
+            alert("after");
         }
     });
 });
